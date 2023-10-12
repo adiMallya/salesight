@@ -1,0 +1,51 @@
+[
+    {
+        "_id": "5d713995b721c3bb38c1f5d0",
+        "itemName": "Laptop",
+        "quantity": 20,
+        "price": 8000,
+        "category": "Electronics"
+    },
+    {
+        "_id": "5d713a66ec8f2b88b8f830b8",
+        "itemName": "T-shirt",
+        "quantity": 100,
+        "price": 450,
+        "category": "Clothing"
+    },
+    {
+        "_id": "5d725a037b292f5f8ceff787",
+        "itemName": "Chair",
+        "quantity": 10,
+        "price": 200,
+        "category": "Furniture"
+    },
+    {
+        "_id": "5d725a1b7b292f5f8ceff788",
+        "itemName": "Blue Jeans",
+        "quantity": 50,
+        "price": 899,
+        "category": "Clothing"
+    },
+    {
+        "_id": "5d725a1b7b292f5f8ceff785",
+        "itemName": "Kafka On The Shore",
+        "quantity": 40,
+        "price": 499,
+        "category": "Books"
+    },
+  {
+        "_id": "5d713a66ec8f2b88b8f830a8",
+        "itemName": "Tomatoes",
+        "quantity": 440,
+        "price": 20,
+        "category": "Groceries"
+    },
+  {
+        "_id": "5d713a66ec8f2b88b8f830b7",
+        "itemName": "Lays",
+        "quantity": 140,
+        "price": 10,
+        "category": "Groceries"
+    }
+]

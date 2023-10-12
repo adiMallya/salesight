@@ -1,0 +1,31 @@
+[
+    {
+        "item": "5d725a037b292f5f8ceff787",
+        "quantity": 5,
+        "salePrice": 1000,
+        "createdAt": "2023-09-27"
+    },
+    {
+        "item": "5d725a1b7b292f5f8ceff785",
+        "quantity": 3,
+        "salePrice": 980,
+        "createdAt": "2023-09-27"
+    },
+    {
+        "item": "5d713a66ec8f2b88b8f830b7",
+        "quantity": 20,
+        "salePrice": 60,
+        "createdAt": "2023-10-08"
+    },
+    {
+        "item": "5d713a66ec8f2b88b8f830b8",
+        "quantity": 2,
+        "salePrice": 750,
+        "createdAt": "2023-10-10"
+    },
+    {
+        "item": "5d713a66ec8f2b88b8f830a8",
+        "quantity": 10,
+        "salePrice": 15
+    }
+]
