@@ -3,11 +3,13 @@ const cors = require('cors');
 const helmet = require('helmet');
 const connectDb = require('./config/db');
 const logger = require('./middlewares/logger.middleware');
+const errorHandler = require('./middlewares/error.middleware');
 
 //Connect to Db
 connectDb();
 
 //Routes
+const items = require('./routes/items.routes');
 
 const app = express();
 //Body parser
@@ -26,10 +28,10 @@ app.use(helmet());
 app.get('/', (req, res) => {
   res.send('<h1>Welcome To SaleSight</h1>')
 });
-
+app.use('/api/v1/items', items);
 
 //Error Handling
-// app.use(errorHandler);
+app.use(errorHandler);
 
 const PORT = process.env['PORT'] || 2000;
 
