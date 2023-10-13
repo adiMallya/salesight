@@ -11,6 +11,7 @@ connectDb();
 //Routes
 const items = require('./routes/items.routes');
 const sales = require('./routes/sales.routes');
+const report = require('./routes/report.routes');
 
 const app = express();
 //Body parser
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 });
 app.use('/api/v1/items', items);
 app.use('/api/v1/sales', sales);
+app.use('/api/v1/report', report);
 
 //Error Handling
 app.use(errorHandler);
