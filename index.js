@@ -10,6 +10,7 @@ connectDb();
 
 //Routes
 const items = require('./routes/items.routes');
+const sales = require('./routes/sales.routes');
 
 const app = express();
 //Body parser
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
   res.send('<h1>Welcome To SaleSight</h1>')
 });
 app.use('/api/v1/items', items);
+app.use('/api/v1/sales', sales);
 
 //Error Handling
 app.use(errorHandler);
