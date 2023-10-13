@@ -17,3 +17,13 @@ exports.createSale = async (saleDetail) => {
     throw err;
   }
 }
+
+
+exports.getAllSales = async (startDate, endDate) => {
+  try{
+    const sales = await Sale.find({}).populate('item', 'itemName category');
+    return sales;
+  }catch(err){
+    throw err;
+  }
+}
