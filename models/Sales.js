@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ErrorResponse = require('../utils/errorResponse');
 
 const SaleSchema = new mongoose.Schema({
   item: {
@@ -21,8 +22,26 @@ const SaleSchema = new mongoose.Schema({
 
 SaleSchema.pre('save', function (next) {
   //calculate total rev
-  this.reveune = this.salePrice * this.quantity;
+  this.revenue = this.salePrice * this.quantity;
   next();
+});
+
+SaleSchema.pre('save', async function (next) {
+  //check & decrement stock of item sold
+  try{
+    const item = await mongoose.model('Inventory').findById(this.item);
+
+    if(item && item.quantity < this.quantity){
+      throw new ErrorResponse(`Not enough stock available`, 404);  
+    }
+
+    item.quantity -= this.quantity;
+    await item.save();
+    
+    next();
+  } catch(err){
+    next(err);
+  } 
 });
 
 module.exports = mongoose.model('Sale', SaleSchema);
