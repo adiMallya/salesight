@@ -7,14 +7,14 @@ const router = express.Router();
 // @route : GET /api/v1/report/inventory
 // @access : Public
 router.get('/inventory', async (req, res, next) => {
-  try{
+  try {
     const data = await fetchInventoryDetails();
 
     res.status(200).json({
-      succcess: true,
+      success: true,
       data
     });
-  }catch(err){
+  } catch (err) {
     next(err);
   }
 });
@@ -23,14 +23,14 @@ router.get('/inventory', async (req, res, next) => {
 // @route : GET /api/v1/report/sales
 // @access : Public
 router.get('/sales', async (req, res, next) => {
-  try{
+  try {
     const data = await fetchSalesDetails();
 
     res.status(200).json({
       success: true,
       data
     });
-  }catch(err){
+  } catch (err) {
     next(err);
   }
 });
