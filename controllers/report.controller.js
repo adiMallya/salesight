@@ -14,15 +14,15 @@ exports.fetchInventoryDetails = async () => {
       },
       {
         $group: {
-            _id: "$_id.category",
-            items: {
-                $push: {
-                    itemName: "$_id.itemName",
-                    totalStock: "$totalStock",
-                }
-            },
-            totalStockForCategory: { $sum: "$totalStock" },
-            totalItemCountForCategory: { $sum: "$itemCount" }
+          _id: "$_id.category",
+          items: {
+            $push: {
+              itemName: "$_id.itemName",
+              totalStock: "$totalStock",
+            }
+          },
+          totalStockForCategory: { $sum: "$totalStock" },
+          totalItemCountForCategory: { $sum: "$itemCount" }
         }
       },
       {
@@ -94,7 +94,7 @@ exports.fetchSalesDetails = async () => {
       },
       {
         $project: {
-          revenuDetails: {
+          revenueDetails: {
             $map: {
               input: "$revenueDetails",
               as: "revenue",
